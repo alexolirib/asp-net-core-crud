@@ -1,0 +1,11 @@
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.deps.json
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.runtimeconfig.json
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.runtimeconfig.dev.json
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.dll
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.pdb
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.csprojResolveAssemblyReference.cache
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.csproj.CoreCompileInputs.cache
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.AssemblyInfoInputs.cache
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.AssemblyInfo.cs
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.dll
+c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.pdb

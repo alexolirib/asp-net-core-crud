@@ -1,0 +1,23 @@
+﻿@model WebApplicationCore.ViewModels.AuthorIndexViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>@Model.CurrentMessage</h1>
+    <h3>Buscando: @Model.searchById.Name</h3> 
+    <table>
+        @foreach (var author in Model.listAuthors)
+         {
+        <tr>
+            <td><h2>@author.id . </h2></td>
+            <td><h2>Name :@author.Name</h2></td>
+            <td>
+                <a asp-action="details" asp-route-id="@author.id">Details</a>
+            </td>
+        </tr>
+        }
+    </table>
+</body>
+</html>
