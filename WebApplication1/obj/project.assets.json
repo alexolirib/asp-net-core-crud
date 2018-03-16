@@ -13123,23 +13123,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adm\\.nuget\\packages\\": {},
+    "C:\\Users\\alexo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adm\\Desktop\\projeto\\asp-net-core-crud\\WebApplication1\\WebApplicationCore.csproj",
+      "projectUniqueName": "C:\\Users\\alexo\\Desktop\\asp-net-core-crud\\WebApplication1\\WebApplicationCore.csproj",
       "projectName": "WebApplicationCore",
-      "projectPath": "C:\\Users\\adm\\Desktop\\projeto\\asp-net-core-crud\\WebApplication1\\WebApplicationCore.csproj",
-      "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adm\\Desktop\\projeto\\asp-net-core-crud\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\alexo\\Desktop\\asp-net-core-crud\\WebApplication1\\WebApplicationCore.csproj",
+      "packagesPath": "C:\\Users\\alexo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexo\\Desktop\\asp-net-core-crud\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

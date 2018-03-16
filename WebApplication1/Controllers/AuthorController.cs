@@ -13,7 +13,7 @@ namespace WebApplicationCore.Controllers
     {
         private IRepositoryAuthor _repositoryAuthor;
 
-        public AuthorController(IRepositoryAuthor  repositoryAuthor)
+        public AuthorController(IRepositoryAuthor repositoryAuthor)
         {
             _repositoryAuthor = repositoryAuthor;
         }
@@ -21,7 +21,7 @@ namespace WebApplicationCore.Controllers
         {
             var author = new AuthorIndexViewModel();
             author.listAuthors = _repositoryAuthor.GetAllAuthor();
-            author.searchById = _repositoryAuthor.GetAuthorById(2);
+            author.searchById = _repositoryAuthor.GetAuthorById(1);
             author.CurrentMessage = "Primeiro busca";
             return View(author);
         }
@@ -36,6 +36,32 @@ namespace WebApplicationCore.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(author);
+        }
+
+        [HttpGet]
+        public IActionResult create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult create(AuthorEditModel model)
+        {//validação do servidor
+            if (ModelState.IsValid)
+            {
+                var newAuthor = new Author();
+                newAuthor.Name = model.Name;
+                newAuthor.Age = model.Age;
+                newAuthor = _repositoryAuthor.Cadastrar(newAuthor);
+
+                //forma errada pois  quando atualizava a tela salva novamente return View("details", newAuthor);
+                return RedirectToAction(nameof(details), new { id = newAuthor.id });//é preciso um objeto
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

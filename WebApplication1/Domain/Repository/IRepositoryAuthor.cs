@@ -10,6 +10,8 @@ namespace WebApplicationCore.Domain.Repository
         IEnumerable<Author> GetAllAuthor();
 
         Author GetAuthorById(int id);
+
+        Author Cadastrar(Author author);
     }
 
 }

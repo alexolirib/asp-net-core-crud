@@ -9,7 +9,7 @@ namespace WebApplicationCore.Domain.Repository
     class RepositoryAuthor : IRepositoryAuthor
     {
 
-        List<Author> authors = new List<Author>
+        List<Author> ListAuthors = new List<Author>
             {
                 new Author
                 {
@@ -38,14 +38,21 @@ namespace WebApplicationCore.Domain.Repository
 
                 };
 
+        public Author Cadastrar(Author author)
+        {
+            author.id = ListAuthors.Max(a => a.id) + 1;
+            ListAuthors.Add(author);
+            return author;
+        }
+
         public IEnumerable<Author> GetAllAuthor()
         {
-            return authors.OrderBy(c=>c.id);
+            return ListAuthors.OrderBy(c=>c.id);
         }
 
         public Author GetAuthorById(int id)
         {
-            var listAuthor = authors;
+            var listAuthor = ListAuthors;
 
             var authorId = listAuthor.Where(c => c.id == id).FirstOrDefault();
 

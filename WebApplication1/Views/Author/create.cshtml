@@ -1,0 +1,15 @@
+﻿@model WebApplicationCore.Domain.Author
+<h1>Cadastro Author</h1>
+
+<form method="post">
+    
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span> <br />
+    <br />
+    <label asp-for="Age"></label>
+    <input asp-for="Age" />
+    <span asp-validation-for="Age"></span>
+
+    <input type="submit" name="Save" value="Save" />
+</form>
