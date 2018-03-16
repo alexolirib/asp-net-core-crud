@@ -1,2 +1,22 @@
-﻿@model Enti
+﻿@model WebApplicationCore.ViewModels.CourseIndexViewModel
 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cursos</title>
+</head>
+<body>
+    <h3>Curso escolhido - @Model.CourseId.Name</h3>
+    <table>
+        @foreach (var course in Model.listCourse)
+        {
+            <tr>
+                <td><h4>@course.id.</h4></td>
+                <td><h4>@course.Name</h4></td>
+                <td><h4>--------</h4></td>
+                <td><h4><a asp-action="details" style="text-decoration: none" asp-route-id="@course.id">  Details</a></h4></td>
+            </tr>
+        }
+    </table>
+    <a asp-action="create" style="text-decoration: none">Create new course</a>
+</body>
+</html>

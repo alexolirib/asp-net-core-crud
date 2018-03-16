@@ -1,0 +1,10 @@
+﻿@model WebApplicationCore.ViewModels.CourseCreateViewModels
+<h1>Create</h1>
+
+<form method="post">
+    <input asp-for="@Model.course.Name" />
+
+    <select asp-for="@Model.course.Author" asp-items="@Model.listAuthor"></select>
+
+    <input type="submit" name="Save" value="Save" />
+</form>

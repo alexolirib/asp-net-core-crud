@@ -8,7 +8,7 @@ namespace WebApplicationCore.Domain.Repository
 
     class RepositoryCourse : IRepositoryCourse
     {
-        List<Course> courses = new List<Course>
+        IEnumerable<Course> courses = new List<Course>
         {
             new Course
             {
@@ -18,20 +18,20 @@ namespace WebApplicationCore.Domain.Repository
             },
             new Course
             {
-                id = 1,
+                id = 2,
                 Name = "c# Intermediário",
                 AuthorId = 1
             },
             new Course
             {
-                id = 1,
+                id = 3,
                 Name = "c# Avançado",
                 AuthorId = 1
             },
             new Course
             {
-                id = 1,
-                Name = "java",
+                id = 4,
+                Name = "Java",
                 AuthorId = 2
             }
         };
@@ -44,7 +44,11 @@ namespace WebApplicationCore.Domain.Repository
 
         public Course GetCourseById(int id)
         {
+            var author = new RepositoryAuthor();
+            var listAuthor = author.GetAllAuthor();
+
             return courses.FirstOrDefault(c => c.id == id);
+            
         }
     }
 }

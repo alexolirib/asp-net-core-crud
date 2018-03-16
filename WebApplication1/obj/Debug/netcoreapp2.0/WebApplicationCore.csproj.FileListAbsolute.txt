@@ -9,3 +9,14 @@ c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcor
 c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.AssemblyInfo.cs
 c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.dll
 c:\users\alexo\source\repos\EntityFrameworkcore\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.pdb
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.deps.json
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.runtimeconfig.json
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.runtimeconfig.dev.json
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.dll
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\bin\Debug\netcoreapp2.0\WebApplicationCore.pdb
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.csprojResolveAssemblyReference.cache
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.AssemblyInfoInputs.cache
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.AssemblyInfo.cs
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.dll
+C:\Users\adm\Desktop\projeto\asp-net-core-crud\WebApplication1\obj\Debug\netcoreapp2.0\WebApplicationCore.pdb
