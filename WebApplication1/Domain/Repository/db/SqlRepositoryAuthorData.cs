@@ -14,7 +14,7 @@ namespace WebApplicationCore.Domain.Repository
         {
             _context = context;
         }
-        public Author Cadastrar(Author author)
+        public Author add(Author author)
         {
             _context.Authors.Add(author);
             _context.SaveChanges();

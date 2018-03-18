@@ -11,9 +11,10 @@ using WebApplicationCore.Data;
 namespace WebApplicationCore.Migrations
 {
     [DbContext(typeof(CollegeDbContext))]
-    partial class CollegeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180318021838_ConfigTable2")]
+    partial class ConfigTable2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

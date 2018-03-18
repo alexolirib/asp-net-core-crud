@@ -11,9 +11,10 @@ using WebApplicationCore.Data;
 namespace WebApplicationCore.Migrations
 {
     [DbContext(typeof(CollegeDbContext))]
-    partial class CollegeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180318021741_ConfigTable")]
+    partial class ConfigTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,9 +44,7 @@ namespace WebApplicationCore.Migrations
 
                     b.Property<int>("AuthorId");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(80);
+                    b.Property<string>("Name");
 
                     b.HasKey("id");
 

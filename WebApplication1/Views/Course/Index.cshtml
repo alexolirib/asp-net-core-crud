@@ -5,7 +5,7 @@
     <title>Cursos</title>
 </head>
 <body>
-    <h3>Curso escolhido - @Model.CourseId.Name</h3>
+    <h3>Authors</h3>
     <table>
         @foreach (var course in Model.listCourse)
         {
@@ -17,6 +17,6 @@
             </tr>
         }
     </table>
-    <a asp-action="create" style="text-decoration: none">Create new course</a>
+    <a asp-action="Index" asp-controller="Home">Retornar para Home</a>   <a asp-action="create" style="text-decoration: none">Create new course</a>
 </body>
 </html>

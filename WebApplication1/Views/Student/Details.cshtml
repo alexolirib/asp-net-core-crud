@@ -1,0 +1,11 @@
+﻿@model WebApplicationCore.Domain.Student
+
+<h2>@Model.Name</h2>
+
+<h2>...Details...</h2>
+<div style="font-size: 26px">
+    ID = @Model.id <br />
+    Name = @Model.Name
+</div>
+<br />
+<a asp-controller="Student" asp-action="Index">Index</a>

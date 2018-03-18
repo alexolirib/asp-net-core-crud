@@ -6,7 +6,6 @@
 </head>
 <body>
     <h1>@Model.CurrentMessage</h1>
-    <h3>Buscando: @Model.searchById.Name</h3> 
     <table>
         @foreach (var author in Model.listAuthors)
          {
@@ -19,6 +18,13 @@
         </tr>
         }
     </table>
-    <a asp-action="create">Create</a>
+    <a asp-action="Index" asp-controller="Home">Home</a>  <a asp-action="create">Create</a>
 </body>
 </html>
+
+
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>

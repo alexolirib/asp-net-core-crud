@@ -28,6 +28,7 @@ namespace WebApplication1
         {
             services.AddScoped<IRepositoryCourse, RepositoryCourse>();
             services.AddScoped<IRepositoryAuthor, SqlRepositoryAuthorData>();
+            services.AddScoped<IRepositoryStudent, SqlRepositoryStudentData>();
             services.AddDbContext<CollegeDbContext>(
                                     options => options.UseSqlServer(_configuration.GetConnectionString("SystemCollege")));
             // services.AddSingleton<ISaudar, Saudar>();

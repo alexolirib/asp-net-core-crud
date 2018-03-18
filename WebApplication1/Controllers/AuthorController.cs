@@ -21,8 +21,7 @@ namespace WebApplicationCore.Controllers
         {
             var author = new AuthorIndexViewModel();
             author.listAuthors = _repositoryAuthor.GetAllAuthor();
-            author.searchById = _repositoryAuthor.GetAuthorById(1);
-            author.CurrentMessage = "Primeiro busca";
+            author.CurrentMessage = "Authors";
             return View(author);
         }
 
@@ -53,7 +52,7 @@ namespace WebApplicationCore.Controllers
                 var newAuthor = new Author();
                 newAuthor.Name = model.Name;
                 newAuthor.Age = model.Age;
-                newAuthor = _repositoryAuthor.Cadastrar(newAuthor);
+                newAuthor = _repositoryAuthor.add(newAuthor);
 
                 //forma errada pois  quando atualizava a tela salva novamente return View("details", newAuthor);
                 return RedirectToAction(nameof(details), new { id = newAuthor.id });//é preciso um objeto

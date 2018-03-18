@@ -1,0 +1,15 @@
+﻿@model WebApplicationCore.ViewModels.StudentIndexViewModel
+
+<h2>@Model.CurrentMensage</h2>
+
+<table>
+    @foreach (var author in Model.listStudent)
+    {
+        <tr>
+            <td><h2>@author.id . Name : @author.Name</h2></td>
+            <td><a asp-action="Details" asp-route-id="@author.id">Details</a></td>      
+        </tr>
+    }
+</table>
+<a asp-controller="Home" asp-action="Index">Home</a>  <a asp-action="Create">Create</a>
+

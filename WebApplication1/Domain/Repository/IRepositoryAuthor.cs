@@ -11,7 +11,7 @@ namespace WebApplicationCore.Domain.Repository
 
         Author GetAuthorById(int id);
 
-        Author Cadastrar(Author author);
+        Author add(Author author);
     }
 
 }

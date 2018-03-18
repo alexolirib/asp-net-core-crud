@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 
 namespace WebApplicationCore.Domain.Repository
 {
-    interface IRepositoryStudent
+    public interface IRepositoryStudent
     {
-        List<Author> GetAllStudent();
+        IEnumerable<Student> GetAllStudent();
 
-        Author GetStudentById(int id);
+        Student GetStudentById(int id);
+
+        Student add(Student author);
     }
 }

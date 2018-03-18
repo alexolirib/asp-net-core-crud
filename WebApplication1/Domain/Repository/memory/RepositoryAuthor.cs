@@ -38,7 +38,7 @@ namespace WebApplicationCore.Domain.Repository
 
                 };
 
-        public Author Cadastrar(Author author)
+        public Author add(Author author)
         {
             author.id = ListAuthors.Max(a => a.id) + 1;
             ListAuthors.Add(author);

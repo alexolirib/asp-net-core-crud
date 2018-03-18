@@ -1,0 +1,11 @@
+﻿@model WebApplicationCore.ViewModels.StudentEditModel
+
+<h1>Cadastro Student</h1>
+
+<form method="post">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+
+    <input type="submit" name="Save" value="Save" />
+</form>
