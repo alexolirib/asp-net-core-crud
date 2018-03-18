@@ -1,0 +1,9 @@
+﻿@model WebApplicationCore.ViewModels.AuthorDeleteModel
+
+<h2>You really want to exclude the author @Html.DisplayFor(c => c.Name)?  </h2>
+
+<form asp-action="Delete">
+    <input type="submit" name="Delete" value="Delete" />
+</form>
+
+<a asp-action="Index" asp-controller="Author">Retornar para menu de Author</a>

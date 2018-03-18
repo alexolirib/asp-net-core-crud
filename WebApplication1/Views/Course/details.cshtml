@@ -1,12 +1,12 @@
-﻿@model WebApplicationCore.Domain.Course
+﻿@model WebApplicationCore.ViewModels.CourseDetailsViewModel
 <div style="text-align:center">
-    <h1>@Model.Name</h1>
+    <h1>@Model.course.Name</h1>
 
     <h4>--------------Details--------------</h4>
 
-    <h2>id - @Model.id</h2>
-    <h2>Nome - @Model.Name</h2>
-    <h2>Professor - @Model.AuthorId</h2>
+    <h2>id - @Model.course.id</h2>
+    <h2>Nome - @Model.course.Name</h2>
+    <h2>Professor - @Model.authorCurso.Name</h2>
 
     <a asp-action="Index" style="text-decoration: none" asp-controller="Course">Retornar ao menu</a>
 </div>

@@ -12,5 +12,7 @@ namespace WebApplicationCore.Domain.Repository
         Student GetStudentById(int id);
 
         Student add(Student author);
+
+        void remove(Student student);
     }
 }

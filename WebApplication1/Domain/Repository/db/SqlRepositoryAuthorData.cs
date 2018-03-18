@@ -30,5 +30,11 @@ namespace WebApplicationCore.Domain.Repository
         {
             return _context.Authors.FirstOrDefault(c => c.id == id);
         }
+
+        public void remove(Author author)
+        {
+            _context.Authors.Remove(author);
+            _context.SaveChanges();
+        }
     }
 }

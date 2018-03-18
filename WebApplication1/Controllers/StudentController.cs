@@ -18,6 +18,7 @@ namespace WebApplicationCore.Controllers
             _repositoryStudent = repositoryStudent;
         }
 
+
         public IActionResult Index()
         {
             var student = new StudentIndexViewModel();
@@ -26,6 +27,37 @@ namespace WebApplicationCore.Controllers
 
             student.CurrentMensage = "Student";
             return View(student);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var student = _repositoryStudent.GetStudentById(id);
+            if (student == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                var studentViewModel = new StudentEditModelDelete();
+
+                studentViewModel.idStudent = student.id;
+                studentViewModel.nameStudent = student.Name;
+                return View(studentViewModel);
+            }
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirm(int id)
+        {
+            var student = _repositoryStudent.GetStudentById(id);
+            if (student == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            _repositoryStudent.remove(student);
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Details(int id)
@@ -47,7 +79,7 @@ namespace WebApplicationCore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(StudentEditModel model)
+        public IActionResult Create(StudentEditModelAdd model)
         {
             if (ModelState.IsValid)
             {

@@ -6,9 +6,9 @@ using WebApplicationCore.Domain;
 
 namespace WebApplicationCore.ViewModels
 {
-    public class CourseIndexViewModel
+    public class CourseDetailsViewModel
     {
-        public IEnumerable<Course> listCourse { get; set; }
-        public String CurrentMensage { get; set; }
+        public Course course { get; set; }
+        public Author authorCurso { get; set; }
     }
 }

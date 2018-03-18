@@ -1,0 +1,27 @@
+﻿@model WebApplicationCore.ViewModels.EvaluationIndexViewModel
+
+<h2>@Model.MensgemAtual</h2>
+
+<table border="1" style="text-align: center">
+
+    <tr>
+        <td><h2>id</h2></td>
+        <td><h2>Course</h2></td>
+        <td><h2>Student</h2></td>
+        <td><h2>nota</h2></td>
+        <td><h2></h2></td>
+    </tr>
+    @foreach (var evaluation in Model.ListEvaluation)
+    {
+        <tr>
+            <td><h2>@evaluation.id</h2></td>
+            <td><h2>@evaluation.Course.Name</h2></td>
+            <td><h2>@evaluation.Student.Name</h2></td>
+            <td><h2>@evaluation.Note</h2></td>
+            <td><h3><a asp-action="Delete" asp-route-id="@evaluation.id">Remove</a></h3></td>
+        </tr>
+
+    }
+</table>
+<a asp-controller="Home" asp-action="Index">Home</a> <a asp-action="Create">Create</a>
+

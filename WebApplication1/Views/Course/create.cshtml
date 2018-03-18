@@ -1,10 +1,19 @@
 ﻿@model WebApplicationCore.ViewModels.CourseCreateViewModels
-<h1>Create</h1>
 
-<form method="post">
-    <input asp-for="@Model.course.Name" />
-
-    <select asp-for="@Model.course.Author" asp-items="@Model.listAuthor"></select>
-
-    <input type="submit" name="Save" value="Save" />
+<h1>Cadastro Curso</h1>
+<form asp-action="create">
+    <table>
+        <tr>
+            <td><label asp-for="Name"></label></td>
+            <td><label asp-for="AuthorId"></label></td>
+        </tr>
+        <tr>
+            <td> <input asp-for="Name" />
+            <span asp-validation-for="Name"></span></td>
+            <td><select asp-for="AuthorId" asp-items="@Model.authorsList"></select></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="Save" value="Save" /></td>
+        </tr>
+    </table>    
 </form>

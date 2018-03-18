@@ -62,5 +62,34 @@ namespace WebApplicationCore.Controllers
                 return View();
             }
         }
+
+        public IActionResult Delete(int id)
+        {
+            Author author = _repositoryAuthor.GetAuthorById(id);
+            if (author == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            var authorViewModel = new AuthorDeleteModel()
+            {
+                Name = author.Name,
+                age = author.Age
+            };
+
+            return View(authorViewModel);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirm(int id)
+        {
+            Author author = _repositoryAuthor.GetAuthorById(id);
+            if(author == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            _repositoryAuthor.remove(author);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

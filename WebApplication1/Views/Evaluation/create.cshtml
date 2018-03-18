@@ -1,0 +1,18 @@
+﻿@model WebApplicationCore.ViewModels.EvaluationCreateViewModel
+
+<form  asp-action="create">
+    <table>
+        <tr>
+            <td><label asp-for="idCourse"></label></td>
+            <td><label asp-for="idStudent"></label></td>
+            <td><label asp-for="Note"></label></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><select asp-for="idCourse" asp-items="@Model.nomeCourse"></select></td>
+            <td><select asp-for="idStudent" asp-items="@Model.nomeStudent"></select></td>
+            <td><input asp-for="Note"  max="10" min="0"/> <span asp-validation-for="Note"></span></td>
+            <td><input type="submit" name="Save" value="Save" /></td>
+        </tr>
+    </table>
+</form>

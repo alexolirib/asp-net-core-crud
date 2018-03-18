@@ -6,9 +6,9 @@ using WebApplicationCore.Domain;
 
 namespace WebApplicationCore.ViewModels
 {
-    public class CourseIndexViewModel
+    public class EvaluationIndexViewModel
     {
-        public IEnumerable<Course> listCourse { get; set; }
-        public String CurrentMensage { get; set; }
+        public String MensgemAtual { get; set; }
+        public IEnumerable<Evaluation> ListEvaluation { get; set; }
     }
 }

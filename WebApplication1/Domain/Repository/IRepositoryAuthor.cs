@@ -12,6 +12,8 @@ namespace WebApplicationCore.Domain.Repository
         Author GetAuthorById(int id);
 
         Author add(Author author);
+
+        void remove(Author author);
     }
 
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebApplicationCore.Domain.Repository
 {
@@ -36,6 +37,10 @@ namespace WebApplicationCore.Domain.Repository
             }
         };
 
+        public Course add(Course course)
+        {
+            throw new NotImplementedException();
+        }
 
         public IEnumerable<Course> GetAllCourse()
         {
@@ -49,6 +54,16 @@ namespace WebApplicationCore.Domain.Repository
 
             return courses.FirstOrDefault(c => c.id == id);
             
+        }
+
+        public void remove(Course course)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<SelectListItem> SelectListItemAuthor()
+        {
+            throw new NotImplementedException();
         }
     }
 }

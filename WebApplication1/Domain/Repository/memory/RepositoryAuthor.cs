@@ -38,6 +38,10 @@ namespace WebApplicationCore.Domain.Repository
 
                 };
 
+        public RepositoryAuthor()
+        {
+        }
+
         public Author add(Author author)
         {
             author.id = ListAuthors.Max(a => a.id) + 1;
@@ -57,6 +61,11 @@ namespace WebApplicationCore.Domain.Repository
             var authorId = listAuthor.Where(c => c.id == id).FirstOrDefault();
 
             return authorId;
+        }
+
+        public void remove(Author author)
+        {
+            throw new NotImplementedException();
         }
     }
 }

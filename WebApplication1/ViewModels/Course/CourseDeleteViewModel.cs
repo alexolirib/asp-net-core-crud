@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplicationCore.Domain;
 
 namespace WebApplicationCore.ViewModels
 {
-    public class StudentEditModel
+    public class CourseDeleteViewModel
     {
-        [Display(Name="Nome Estudante")]
-        [Required, MaxLength(80)]
-        public String Name { get; set; }
+        public int idCourse { get; set; }
+        public String NomeCourse { get; set; }
     }
 }

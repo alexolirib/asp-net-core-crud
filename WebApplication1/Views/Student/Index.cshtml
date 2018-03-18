@@ -2,14 +2,16 @@
 
 <h2>@Model.CurrentMensage</h2>
 
-<table>
-    @foreach (var author in Model.listStudent)
-    {
-        <tr>
-            <td><h2>@author.id . Name : @author.Name</h2></td>
-            <td><a asp-action="Details" asp-route-id="@author.id">Details</a></td>      
-        </tr>
-    }
-</table>
+    <table>
+        @foreach (var student in Model.listStudent)
+        {
+            <tr>
+                <td><h2>@student.id . Name : @student.Name</h2></td>
+                <td><a asp-action="Details" asp-route-id="@student.id">Details</a></td>
+                <td><a asp-action="Delete" asp-route-id="@student.id">Delete</a></td>
+
+            </tr>
+        }
+    </table>
 <a asp-controller="Home" asp-action="Index">Home</a>  <a asp-action="Create">Create</a>
 

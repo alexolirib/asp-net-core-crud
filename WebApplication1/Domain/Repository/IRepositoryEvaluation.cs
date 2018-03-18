@@ -1,14 +1,23 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace WebApplicationCore.Domain.Repository
 {
-    interface IRepositoryEvaluation
+    public interface IRepositoryEvaluation
     {
-        List<Author> GetAllEvaluation();
+        IEnumerable<Evaluation> GetAllEvaluation();
 
-        Author GetEvaluationById(int id);
+        Evaluation GetEvaluationById(int id);
+
+        void add(Evaluation evaluation);
+
+        void remove(Evaluation evaluation);
+
+        List<SelectListItem> student();
+
+        List<SelectListItem> course();
     }
 }

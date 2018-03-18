@@ -5,18 +5,18 @@
     <title>Cursos</title>
 </head>
 <body>
-    <h3>Authors</h3>
+    <h3>Cursos</h3>
     <table>
         @foreach (var course in Model.listCourse)
         {
             <tr>
-                <td><h4>@course.id.</h4></td>
-                <td><h4>@course.Name</h4></td>
-                <td><h4>--------</h4></td>
-                <td><h4><a asp-action="details" style="text-decoration: none" asp-route-id="@course.id">  Details</a></h4></td>
+                <td><h2>@course.id.</h2></td>
+                <td><h2>@course.Name</h2></td>
+                <td><a asp-action="details" style="text-decoration: none" asp-route-id="@course.id">  Details</a></td>
+                <td><a asp-action="Delete" style="text-decoration: none" asp-route-id="@course.id">Remove</a> </td>
             </tr>
         }
     </table>
-    <a asp-action="Index" asp-controller="Home">Retornar para Home</a>   <a asp-action="create" style="text-decoration: none">Create new course</a>
+    <a asp-action="Index" asp-controller="Home">Home</a>   <a asp-action="create" style="text-decoration: none">Create</a>
 </body>
 </html>

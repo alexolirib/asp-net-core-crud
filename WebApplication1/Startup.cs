@@ -26,9 +26,10 @@ namespace WebApplication1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IRepositoryCourse, RepositoryCourse>();
+            services.AddScoped<IRepositoryCourse, SqlRepositoryCourseData>();
             services.AddScoped<IRepositoryAuthor, SqlRepositoryAuthorData>();
             services.AddScoped<IRepositoryStudent, SqlRepositoryStudentData>();
+            services.AddScoped<IRepositoryEvaluation, SqlRepositoryEvaluationData>();
             services.AddDbContext<CollegeDbContext>(
                                     options => options.UseSqlServer(_configuration.GetConnectionString("SystemCollege")));
             // services.AddSingleton<ISaudar, Saudar>();

@@ -31,6 +31,10 @@ namespace WebApplicationCore.Domain.Repository
             return _context.Students.FirstOrDefault(c => c.id == id);
         }
 
-
+        public void remove(Student student)
+        {
+            _context.Students.Remove(student);
+            _context.SaveChanges();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,5 +11,11 @@ namespace WebApplicationCore.Domain.Repository
         IEnumerable<Course> GetAllCourse();
 
         Course GetCourseById(int id);
+
+        Course add(Course course);
+
+        void remove(Course course);
+
+        List<SelectListItem> SelectListItemAuthor();
     }
 }
