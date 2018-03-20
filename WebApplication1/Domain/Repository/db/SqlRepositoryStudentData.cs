@@ -36,5 +36,12 @@ namespace WebApplicationCore.Domain.Repository
             _context.Students.Remove(student);
             _context.SaveChanges();
         }
+
+        public Student upDate(Student student)
+        {
+            _context.Students.Update(student);
+            _context.SaveChanges();
+            return student;
+        }
     }
 }

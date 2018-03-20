@@ -93,5 +93,39 @@ namespace WebApplicationCore.Controllers
                 return View();
             }
         }
+
+        [HttpGet]
+        public IActionResult upDate(int id)
+        {
+            var student = _repositoryStudent.GetStudentById(id);
+            if(student == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            var studentViewModel = new StudentEditModelAdd()
+            {
+                Name = student.Name
+            };
+            return View(studentViewModel);
+        }
+
+        public IActionResult upDate(int id, StudentEditModelAdd model)
+        {
+            if (ModelState.IsValid)
+            {
+                var student = _repositoryStudent.GetStudentById(id);
+                if(student == null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                student.Name = model.Name;
+                _repositoryStudent.upDate(student);
+                return RedirectToAction(nameof(Details), new { student.id });
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
+        }
     }
 }

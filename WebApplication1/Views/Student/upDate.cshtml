@@ -1,0 +1,14 @@
+﻿@model WebApplicationCore.ViewModels.StudentEditModelAdd
+<h2>Edit</h2>
+
+<form asp-action="upDate">
+    <table>
+        <tr>
+            <td><label asp-for="Name"></label></td>
+        </tr>
+        <tr>
+            <td><input asp-for="Name" /><span asp-validation-for="Name"></span> </td>
+            <td><input type="submit" name="Edit" value="Edit" /></td>
+        </tr>
+    </table>
+</form>

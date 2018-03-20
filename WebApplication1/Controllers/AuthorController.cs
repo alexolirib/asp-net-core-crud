@@ -84,11 +84,44 @@ namespace WebApplicationCore.Controllers
         public IActionResult DeleteConfirm(int id)
         {
             Author author = _repositoryAuthor.GetAuthorById(id);
-            if(author == null)
+            if (author == null)
             {
                 return RedirectToAction(nameof(Index));
             }
             _repositoryAuthor.remove(author);
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult upDate(int id)
+        {
+            var author = _repositoryAuthor.GetAuthorById(id);
+            if (author == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            var authorViewModel = new AuthorEditModel();
+            authorViewModel.Name = author.Name;
+            authorViewModel.Age = author.Age;
+            return View(authorViewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult upDate(int id,AuthorEditModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var author = _repositoryAuthor.GetAuthorById(id);
+                if(author == null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                author.Name = model.Name;
+                author.Age = model.Age;
+                author = _repositoryAuthor.upDate(author);
+                return RedirectToAction(nameof(details),new { author.id });
+            }
             return RedirectToAction(nameof(Index));
         }
     }

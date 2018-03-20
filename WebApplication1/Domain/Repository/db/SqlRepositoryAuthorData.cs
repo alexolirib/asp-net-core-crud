@@ -36,5 +36,12 @@ namespace WebApplicationCore.Domain.Repository
             _context.Authors.Remove(author);
             _context.SaveChanges();
         }
+
+        public Author upDate(Author author)
+        {
+            _context.Authors.Update(author);
+            _context.SaveChanges();
+            return author;
+        }
     }
 }

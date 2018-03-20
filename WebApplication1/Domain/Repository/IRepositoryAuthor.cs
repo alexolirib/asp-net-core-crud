@@ -14,6 +14,8 @@ namespace WebApplicationCore.Domain.Repository
         Author add(Author author);
 
         void remove(Author author);
+
+        Author upDate(Author author);
     }
 
 }

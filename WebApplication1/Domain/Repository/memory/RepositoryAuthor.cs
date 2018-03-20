@@ -67,5 +67,10 @@ namespace WebApplicationCore.Domain.Repository
         {
             throw new NotImplementedException();
         }
+
+        public Author upDate(Author author)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
