@@ -1,22 +1,22 @@
-﻿@model WebApplicationCore.ViewModels.CourseIndexViewModel
+﻿@model CourseIndexViewModel
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Cursos</title>
-</head>
-<body>
-    <h3>Cursos</h3>
-    <table>
-        @foreach (var course in Model.listCourse)
-        {
-            <tr>
-                <td><h2>@course.id.</h2></td>
-                <td><h2>@course.Name</h2></td>
-                <td><a asp-action="details" style="text-decoration: none" asp-route-id="@course.id">  Details</a></td>
-                <td><a asp-action="Delete" style="text-decoration: none" asp-route-id="@course.id">Remove</a> </td>
-            </tr>
-        }
-    </table>
-    <a asp-action="Index" asp-controller="Home">Home</a>   <a asp-action="create" style="text-decoration: none">Create</a>
-</body>
-</html>
+@{
+    ViewBag.Title = "Cursos";
+}
+<h3>All courses</h3>
+<table>
+    @foreach (var course in Model.listCourse)
+    {
+        <tr>
+            <td><h2>@course.id.</h2></td>
+            <td><h2>@course.Name</h2></td>
+            <td><a asp-action="details" style="text-decoration: none" asp-route-id="@course.id">  Details</a></td>
+            <td><a asp-action="Delete" style="text-decoration: none" asp-route-id="@course.id">Remove</a> </td>
+        </tr>
+    }
+</table>
+<a asp-action="Index" asp-controller="Home">Home</a>   <a asp-action="create" style="text-decoration: none">Create</a>
+
+@section footer{ 
+    Course
+}

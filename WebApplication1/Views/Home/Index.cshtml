@@ -1,4 +1,11 @@
-﻿<h2>Index</h2>
+﻿@{
+    ViewBag.Title = "Home page";
+    @* não preciso mais especificar pois é visto do viewStart, só se eu quisesse
+        especificar algum diferente
+        Layout = "~/Views/Shared/_Layout.cshtml";*@
+}
+
+<h2>Index</h2>
 
 <h1>Click where you want to continue:</h1>
 
@@ -9,9 +16,13 @@
     <li><a asp-controller="Evaluation" asp-action="Index">Evaluation</a></li>
 </ul>
 
+@*Chamando auqi a seção que foi criada*@
+@section footer{
+    Page main
+}
+
 <style>
     a {
         text-decoration: none;
     }
 </style>
-    

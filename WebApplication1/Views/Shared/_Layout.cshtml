@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+@*Aqui será um arquivo compartilhado com as outras páginas*@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @*o codigo fica aqui*@
+        @RenderBody()
+    </div>
+    <footer>
+       @*aqui abro uma seção que vou precisar chamalo onde desejo inserir algo*@
+       @*Importante deixa falso, pois não fico abrigado abrir seção em todas pag*@
+        @RenderSection("footer", false)
+    </footer>
+</body>
+</html>

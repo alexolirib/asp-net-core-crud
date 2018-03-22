@@ -1,14 +1,10 @@
-﻿@model WebApplicationCore.ViewModels.AuthorIndexViewModel
+﻿@model AuthorIndexViewModel
+@*Utilizou o viewImports*@
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    <h1>@Model.CurrentMessage</h1>
-    <table>
-        @foreach (var author in Model.listAuthors)
-         {
+<h1>@Model.CurrentMessage</h1>
+<table>
+    @foreach (var author in Model.listAuthors)
+    {
         <tr>
             <td><h2>@author.id . </h2></td>
             <td><h2>Name :@author.Name</h2></td>
@@ -18,15 +14,13 @@
             <td><a asp-action="Delete" asp-route-id="@author.id">Remove</a></td>
             <td><a asp-action="upDate" asp-route-id="@author.id">Edit</a></td>
         </tr>
-        }
-    </table>
-    <a asp-action="Index" asp-controller="Home">Home</a>  <a asp-action="create">Create</a>
-</body>
-</html>
+    }
+</table>
+<a asp-action="Index" asp-controller="Home">Home</a>  <a asp-action="create">Create</a>
 
 
 <style>
-    a{
+    a {
         text-decoration: none;
     }
 </style>
