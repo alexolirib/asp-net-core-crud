@@ -17,5 +17,7 @@ namespace WebApplicationCore.Domain.Repository
         void remove(Course course);
 
         List<SelectListItem> SelectListItemAuthor();
+
+        Course edit(Course course);
     }
 }

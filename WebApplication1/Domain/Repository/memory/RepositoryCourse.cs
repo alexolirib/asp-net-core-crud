@@ -42,6 +42,11 @@ namespace WebApplicationCore.Domain.Repository
             throw new NotImplementedException();
         }
 
+        public Course edit(Course course)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Course> GetAllCourse()
         {
             return courses.OrderBy(c => c.id);

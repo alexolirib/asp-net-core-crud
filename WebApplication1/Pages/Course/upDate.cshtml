@@ -1,0 +1,19 @@
+﻿@page "{id}"
+@using WebApplicationCore.Pages
+
+@model upDateModel 
+
+<h1>Edit Curso</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="course.id" />
+    <label asp-for="course.Name"></label>
+    <input asp-for="course.Name" />
+    <span asp-validation-for="course.Name"></span>
+    <label asp-for="course.AuthorId"></label>
+    <select asp-for="course.AuthorId" asp-items="@Model.ListAuthor" ></select>
+    <span asp-validation-for="course.Name"></span>
+    <input type="submit" name="edit" value="Edit" />
+
+</form>
+<a asp-action="Index" style="text-decoration: none" asp-controller="Course">Retornar  </a>

@@ -24,6 +24,14 @@ namespace WebApplicationCore.Domain.Repository
             return course;
         }
 
+        public Course edit(Course course)
+        {
+            _context.Attach(course).State =
+                EntityState.Modified;
+            _context.SaveChanges();
+            return course;
+        }
+
         public IEnumerable<Course> GetAllCourse()
         {
             return _context.Courses.OrderBy(c => c.id).ToList();

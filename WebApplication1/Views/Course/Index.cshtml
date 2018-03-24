@@ -12,6 +12,7 @@
             <td><h2>@course.Name</h2></td>
             <td><a asp-action="details" style="text-decoration: none" asp-route-id="@course.id">  Details</a></td>
             <td><a asp-action="Delete" style="text-decoration: none" asp-route-id="@course.id">Remove</a> </td>
+            <td><a asp-page="/Course/upDate" style="text-decoration: none" asp-route-id="@course.id">Edit</a></td>
         </tr>
     }
 </table>
